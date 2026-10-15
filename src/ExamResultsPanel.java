@@ -1,7 +1,7 @@
 import javax.swing.*;
 import java.awt.*;
 
-// PANEL 4: EXAM RESULTS
+// PANEL 4: EXAM RESULTSs
 // Owner: registration-results-team
 
 public class ExamResultsPanel extends JPanel {

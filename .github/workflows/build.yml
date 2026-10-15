@@ -1,0 +1,28 @@
+name: Build
+
+# Compiles the project on every pull request and every push to main.
+# Branch protection can require this check to pass before merging.
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+
+jobs:
+  compile:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the code
+        uses: actions/checkout@v4
+
+      - name: Set up Java 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Compile all source files
+        run: |
+          mkdir -p out
+          javac -d out src/*.java

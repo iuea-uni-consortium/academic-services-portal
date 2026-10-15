@@ -1,0 +1,21 @@
+# CODEOWNERS - decides who MUST review a pull request.
+# The LAST matching line wins, so keep the general rule first.
+# Teams listed here need at least Write access to the repository.
+#
+# NOTE: "iuea-uni-consortium" is the organization name. If your organization
+# has a different name, find-and-replace it in this file.
+
+# Default: maintainers review anything not listed below
+*                                    @iuea-uni-consortium/maintainers
+
+# Shared shell, landing page and repo configuration - maintainers only
+/src/UniversityPortal.java           @iuea-uni-consortium/maintainers
+/src/DashboardPanel.java             @iuea-uni-consortium/maintainers
+/.github/                            @iuea-uni-consortium/maintainers
+
+# Service modules - owning team, with maintainers as a fallback reviewer
+/src/CourseRegistrationPanel.java    @iuea-uni-consortium/registration-results-team @iuea-uni-consortium/maintainers
+/src/ExamResultsPanel.java           @iuea-uni-consortium/registration-results-team @iuea-uni-consortium/maintainers
+/src/FeePaymentPanel.java            @iuea-uni-consortium/fees-hostel-team @iuea-uni-consortium/maintainers
+/src/HostelPanel.java                @iuea-uni-consortium/fees-hostel-team @iuea-uni-consortium/maintainers
+/src/LibraryPanel.java               @iuea-uni-consortium/library-team @iuea-uni-consortium/maintainers
