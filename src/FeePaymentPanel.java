@@ -1,7 +1,7 @@
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
 import java.awt.*;
-
+// Amount must be a positive number
 // PANEL 3: FEE PAYMENT
 // Handles money-related screens, so changes need extra care.
 // Owner: fees-hostel-team (maintainers can also approve)
